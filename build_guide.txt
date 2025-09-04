@@ -1,0 +1,47 @@
+
+## You need atleast two terminals for open OpenOCD & programing script.
+
+
+## Setup for environment first. (need to setup if using new terminal)
+## Each terminal should setup environment.
+ cd framework
+ ./tools/setupscripts/ubuntu-setup.sh
+ . ./tools/setupscripts/env.sh
+ pipenv sync
+
+
+
+## Run OpenOCD for GDB service. (New Terminal, remember to do environment setup)
+ cd framework
+ openocd -f src/platforms/<your platform>/openocd.cfg
+#ex. openocd -f src/platforms/awh575-mf1-v2/openocd.cfg
+
+
+
+## Program configuration sample file to awh575-mf1-v2. (Edit personal configuration. New Terminal, remember to do environment setup)
+ cd framework
+ ./bcf_write <your platform> <module counrty>
+#ex. ./bcf_write awh575-mf1-v2 US
+
+
+
+## Build ping sample code for platform. (New Terminal, remember to do environment setup)
+ cd examples/<target application>/targets/<your platform>
+#ex. cd examples/ping/targets/awh575-mf1
+
+ make clean && make -j$(nproc)
+
+
+# Run GDB script for burn image to MCU build-in flash
+ ./burn_run.sh
+# Or run GDB manually.
+ ./flash
+ monitor reset halt
+ load
+ c
+
+
+
+
+
+

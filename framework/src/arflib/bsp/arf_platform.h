@@ -1,0 +1,23 @@
+/*
+ *  Copyright (c) 2025 AsiaRF
+ *  All rights reserved.
+ */
+
+#ifndef __ARF_PLATFORM_H__
+#define __ARF_PLATFORM_H__
+
+
+#define PLATFORM_NAME_AWH575_L01		"AWH575-L01"
+
+#define	PLATFORM_NAME_AWH575_MF1		"AWH575-MF1"
+#define PLATFORM_NAME_AWH575_MF1_V2		"AWH575-MF1-V2"
+
+#define PLATFOEM_NAME_AWH575_MF4		"AWH575-MF4"
+#define PLATFORM_NAME_AWH575_MF4_SDIO	"AWH575-MF4 (sdio)"
+
+#define PLATFORM_NAME_AWMHU5_001		"AWMHU5-001"
+
+#define PLATFORM_NAME_AWH575_001		"AWH575-001"
+
+
+#endif

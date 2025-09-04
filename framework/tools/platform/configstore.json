@@ -6,7 +6,7 @@
         "configstore_last_sector": 3,
         "configstore_base_address": "0x8004000",
         "configstore_size": "0x4000",
-        "supported_platforms": ["mm-ekh08-u575","mm-ekh08-u575-sdio"]
+        "supported_platforms": ["mm-ekh08-u575","mm-ekh08-u575-sdio","awh575-mf1-v2","awmhu5-001","awh575-001"]
     },
     "stm32u585.cpu":
     {

@@ -56,7 +56,9 @@ extern const uint32_t mmhal_system_clock;
 #define configUSE_TIME_SLICING          1
 #define configUSE_IDLE_HOOK             1
 #define configUSE_TICK_HOOK             0
+#ifndef configMAX_PRIORITIES
 #define configMAX_PRIORITIES            ( 8 )
+#endif
 #define configMINIMAL_STACK_SIZE        ( ( unsigned short ) 200 )
 
 #ifndef configTOTAL_HEAP_SIZE
