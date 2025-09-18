@@ -25,6 +25,14 @@ AsiaRF for Wi-Fi HaLow IoT SDK, based on [Morse Micro IoT Software Development K
 
 
 
+## Usage
+
+Quickly execute the example on the AsiaRF platform according to the [build_guide.txt](https://github.com/AsiaRF-Support/mm-iot-sdk/blob/asiarf-patched-2.8.2/build_guide.txt) file.
+
+More details at [Morse.Micro.IoT.SDK.2.8.2.API.Reference.Manual.pdf](https://github.com/MorseMicro/mm-iot-sdk/releases/download/2.8.2/Morse.Micro.IoT.SDK.2.8.2.API.Reference.Manual.pdf) for the full MM-IoT-SDK user guide.
+
+
+
 ## What AsiaRF can Do
 
 - Bring up to [Home Assistant](https://www.home-assistant.io/) application.
@@ -32,14 +40,6 @@ AsiaRF for Wi-Fi HaLow IoT SDK, based on [Morse Micro IoT Software Development K
 - Wi-Fi HaLow Ethernet interface for most platform by USB.
   [Wi-Fi HaLow USB Dongle HaLowFly](https://asiarf.com/product/wi-fi-halow-usb-dongle-halowfly/)
 - Various industrial applications.
-
-
-
-## Usage
-
-Open [Morse.Micro.IoT.SDK.2.8.2.API.Reference.Manual.pdf](https://github.com/MorseMicro/mm-iot-sdk/releases/download/2.8.2/Morse.Micro.IoT.SDK.2.8.2.API.Reference.Manual.pdf) for the full MM-IoT-SDK user guide.
-
-
 
 # License
 
