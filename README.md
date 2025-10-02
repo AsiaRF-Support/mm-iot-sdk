@@ -32,7 +32,7 @@ Quickly execute the example on the AsiaRF platform according to the [build_guide
 
 More details at [Morse.Micro.IoT.SDK.2.8.2.API.Reference.Manual.pdf](https://github.com/MorseMicro/mm-iot-sdk/releases/download/2.8.2/Morse.Micro.IoT.SDK.2.8.2.API.Reference.Manual.pdf) for the full MM-IoT-SDK user guide.
 
-Follow [ThiingsBoard setup guide](https://github.com/AsiaRF-Support/mm-iot-sdk/blob/asiarf-patched-2.8.2/examples/thingsboard_demo/SETUP_GUIDE.md) to setup your AWH575-001 on ThingsBoard.io.
+Follow [ThingsBoard setup guide](https://github.com/AsiaRF-Support/mm-iot-sdk/blob/asiarf-patched-2.8.2/examples/thingsboard_demo/SETUP_GUIDE.md) to setup your AWH575-001 on ThingsBoard.io.
 
 
 
