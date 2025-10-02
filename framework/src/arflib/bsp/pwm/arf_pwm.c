@@ -60,7 +60,7 @@ void pwm_set_level(const pwm_config_t *pwm, uint8_t level)
 	__HAL_TIM_SET_COMPARE(pwm->htim, pwm->channel, get_pwm_ccr(arr, level));
 }
 
-int pwm_get_level(const pwm_config_t *pwm)
+uint8_t pwm_get_level(const pwm_config_t *pwm)
 {
 	if (pwm->htim == NULL) {
 		__ERR("Unable to get timer entry.\n");

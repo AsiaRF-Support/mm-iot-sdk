@@ -133,6 +133,9 @@ int main(void)
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
   MX_USB_OTG_FS_PCD_Init();
+
+  printf("%cc",0x1b);
+
 #if defined(ENABLE_DEBUG_IN_STOP_MODE) && ENABLE_DEBUG_IN_STOP_MODE
   LL_DBGMCU_EnableDBGStopMode();
   printf("\nNote: This firmware has been built with debug in stop mode enabled.\n");
@@ -748,7 +751,7 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 1 */
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 160-1;
+  htim4.Init.Prescaler = 16-1;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim4.Init.Period = 499;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;

@@ -1,14 +1,15 @@
 #
-# Copyright 2021-2023 Morse Micro
+# Copyright 2025 AsiaRF
+#
 #
 
 #
 # This file is not used by PlatformIO. It is only used for building using make.
 #
 
-APP_NAME = ping
+APP_NAME = thingsboard_demo
 
-PLATFORM = awmhu5-001
+PLATFORM = awh575-001
 
 
 # Path to root of the MM IoT SDK package. This will need to be overriden  with the path to
@@ -49,6 +50,7 @@ SRCS_H = $(wildcard $(APP_DIR)/src/*.h)
 INCLUDES += $(APP_DIR)/src
 
 
+BUILD_DEFINES += MQTT_DO_NOT_USE_CUSTOM_CONFIG
 
 
 
@@ -100,6 +102,9 @@ include $(MMIOT_ROOT)/mk/mbedtls.mk
 include $(MMIOT_ROOT)/mk/mmipal.mk
 include $(MMIOT_ROOT)/mk/mmpktmem.mk
 include $(MMIOT_ROOT)/mk/$(IP_STACK).mk
+include $(MMIOT_ROOT)/mk/coreMQTT.mk
+include $(MMIOT_ROOT)/mk/freertoslibs-common.mk
+
 include $(MMIOT_ROOT)/mk/mmping.mk
 
 SRCS_H += $(addprefix $(MMIOT_ROOT)/,$(MMIOT_SRCS_H))

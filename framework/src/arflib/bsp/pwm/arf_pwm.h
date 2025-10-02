@@ -10,9 +10,12 @@
 #include "FreeRTOS.h"
 #include "timers.h"
 
+#define PWM_LEVEL_MAX	PWM_LEVEL_100
+#define PWM_OFF			PWM_LEVEL_0
+
 typedef enum {
 	PWM_LEVEL_ERR = -1,
-	PWM_OFF = 0,
+	PWM_LEVEL_0 = 0,
 	PWM_LEVEL_10 = 10,
 	PWM_LEVEL_20 = 20,
 	PWM_LEVEL_30 = 30,
@@ -22,7 +25,7 @@ typedef enum {
 	PWM_LEVEL_70 = 70,
 	PWM_LEVEL_80 = 80,
 	PWM_LEVEL_90 = 90,
-	PWM_LEVEL_MAX = 100,
+	PWM_LEVEL_100 = 100,
 } pwm_level_t;
 
 typedef struct {
@@ -43,7 +46,7 @@ pwm_config_t pwm_config(TIM_HandleTypeDef *htim, uint32_t channel);
 void pwm_start(const pwm_config_t *pwm);
 void pwm_stop(const pwm_config_t *pwm);
 void pwm_set_level(const pwm_config_t *pwm, uint8_t level);
-int pwm_get_level(const pwm_config_t *pwm);
+uint8_t pwm_get_level(const pwm_config_t *pwm);
 
 
 #endif // __ARF_PWM_H__

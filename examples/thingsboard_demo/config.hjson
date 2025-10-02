@@ -1,9 +1,9 @@
 /*
- * Copyright  Morse Micro
+ * Copyright  2025 AsiaRF
  */
 
 /*
- * This is the config file for loading custom settings for the ping application.
+ * This is the config file for loading custom settings for the mqtt application.
  * To load the settings on to a device, do the following from the `framework` directory:
  *
  *   - Ensure the MMIOT_ROOT environment variable is set to the path to the framework directory
@@ -16,12 +16,10 @@
  *     `pipenv sync`
  *
  *   - Connect the target on USB and run the following command from a shell
- *     `openocd -f src/platforms/mm-ekh08-u575/openocd.cfg`
- *     (Replace mm-ekh08-u575 with the actual name of your platform.)
+ *     `openocd -f src/platforms/awh575-001/openocd.cfg`
  *
  *   - Now run the following command to load the keys to the device:
- *     `pipenv run ./tools/platform/program-configstore.py -H localhost -p mm-ekh08-u575 write-json ../examples/ping/config.hjson`
- *     (Replace mm-ekh08-u575 with the actual name of your platform.)
+ *     `pipenv run ./tools/platform/program-configstore.py -H localhost -p mm-ekh08-u575 write-json ../examples/thingsboard_demo/config.hjson`
  */
 {
     /* You can specify a list of key/value strings in this section to write to config store
@@ -29,37 +27,40 @@
     "strings" : {
         /* The iperf mode, valid values are udp_server, tcp_server, udp_client and
          * tcp_client */
-        "iperf.mode": "udp_server"
+        // "iperf.mode": "udp_server"
         /* IP address of server to connect to when in client mode */
-        "iperf.server": "192.168.1.1"
+        // "iperf.server": "192.168.1.1"
         /* Specifies the port to listen on in server mode. */
-        "iperf.port": "5001"
+        // "iperf.port": "5001"
         /* Duration for client transfers specified either in seconds or bytes. If this is
          * negative, it specifies a time in seconds; if positive, it specifies the number
          * of bytes to transmit. */
-        "iperf.amount": "-10"
+        // "iperf.amount": "-10"
 
-        "ping.target": "192.168.1.1"
-        "ping.count": "10"
-        "ping.interval": "1000"
-        "ping.size": "56"
+        // "ping.target": "192.168.1.1"
+        // "ping.count": "10"
+        // "ping.interval": "1000"
+        // "ping.size": "56"
 
         /* The Wi-Fi SSID */
-        "wlan.ssid": "MorseMicro"
+        "wlan.ssid": "MM_AsiaRF-IoT"
         /* The Wi-Fi password, not required if wlan.security is open */
         "wlan.password": "12345678"
         /* The Wi-Fi security to use, valid values are sae, owe and open */
         "wlan.security": "sae"
         /* The 2 letter country code to ensure the correct regulatory domain is used */
-        // "wlan.country_code": "XX"
+        "wlan.country_code": "US"
 
         /* If true use DHCP, else the static IP configuration will be used */
-        "ip.dhcp_enabled": "false"
+        "ip.dhcp_enabled": "False"
 
         /* These settings are ignored if DHCP is used, but mandatory if using static IP */
-        "ip.ip_addr": "192.168.1.2"
+        "ip.ip_addr": "192.168.3.2"
         "ip.netmask": "255.255.255.0"
-        "ip.gateway": "192.168.1.1"
+        "ip.gateway": "192.168.3.3"
+        "ip.dns_server0": "192.168.3.3"
+        "ip.dns_server1": "8.8.8.8"
+        "ip.dns_server2": "168.95.1.1"
 
         /* These settings are for IPv6, ip6.ip_addr is only required if ip6.autoconfig is
          * false */
@@ -108,7 +109,23 @@
          * into effect only if ip.dhcp_enabled is also true. */
         // "ip.dhcp_offload": "true"
 
-        
+        /* The following settings are required only for the mqttdemo app */
+        /* IP address of the MQTT broker to connect to.  test.mosquitto.org is a publicly
+         * available MQTT broker. */
+        // "mqtt.server": "test.mosquitto.org"
+        /* Specifies the MQTT port on the server to connect to, the default is 1883 */
+        // "mqtt.port": "1883"
+        /* The amount of time in ms to wait before publishing */
+        // "mqtt.publish_delay": "1000"
+        /* The client id string uniquely identifies this device to the broker */
+        // "mqtt.clientid": "<Put your clientid here>"
+        /* The topic to publish/subscribe to.  To keep this unique, insert your clientid in
+         * it. Not doing so may cause you to publish to someone elses device and annoy
+         * them. */
+        // "mqtt.topic": "/MorseMicro/<Put your clientid here>/topic"
+        /* A test message you wish to send */
+        // "mqtt.message": "G'day World!"
+
     },
     /* You can specify a list of key/value hex-strings in this section to write to config store
      * this is equivalent to the write-hex command */
@@ -138,7 +155,7 @@
          * `mf08551` with the appropriate value for the module that you have. For example,
          * if your module were MM6108-MF12345 then you would change the value of this key
          * to: $MMIOT_ROOT/morsefirmware/bcf_mf12345.mbin */
-        // "bcf_file": "$MMIOT_ROOT/morsefirmware/bcf_mf08551.mbin"
+        // "bcf_file": "$MMIOT_ROOT/morsefirmware/bcf_mf08251.mbin"
 
         
     }

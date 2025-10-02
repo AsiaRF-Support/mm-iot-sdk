@@ -3,7 +3,7 @@
  */
 
 /*
- * This is the config file for loading custom settings for the porting_assistant application.
+ * This is the config file for loading custom settings for the cfg application.
  * To load the settings on to a device, do the following from the `framework` directory:
  *
  *   - Ensure the MMIOT_ROOT environment variable is set to the path to the framework directory
@@ -20,7 +20,7 @@
  *     (Replace mm-ekh08-u575 with the actual name of your platform.)
  *
  *   - Now run the following command to load the keys to the device:
- *     `pipenv run ./tools/platform/program-configstore.py -H localhost -p mm-ekh08-u575 write-json ../examples/porting_assistant/config.hjson`
+ *     `pipenv run ./tools/platform/program-configstore.py -H localhost -p mm-ekh08-u575 write-json ../examples/cfg/config.hjson`
  *     (Replace mm-ekh08-u575 with the actual name of your platform.)
  */
 {

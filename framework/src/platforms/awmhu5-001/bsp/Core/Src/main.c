@@ -135,6 +135,9 @@ int main(void)
   MX_UART4_Init();
 #endif
   MX_USB_OTG_FS_PCD_Init();
+
+  printf("%cc",0x1b);
+
 #if defined(ENABLE_DEBUG_IN_STOP_MODE) && ENABLE_DEBUG_IN_STOP_MODE
   LL_DBGMCU_EnableDBGStopMode();
   printf("\nNote: This firmware has been built with debug in stop mode enabled.\n");

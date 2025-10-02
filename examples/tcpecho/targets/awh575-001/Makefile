@@ -102,7 +102,6 @@ include $(MMIOT_ROOT)/mk/mmpktmem.mk
 include $(MMIOT_ROOT)/mk/$(IP_STACK).mk
 include $(MMIOT_ROOT)/mk/mmping.mk
 
-
 SRCS_H += $(addprefix $(MMIOT_ROOT)/,$(MMIOT_SRCS_H))
 # A quick sanity check to see if we're missing any files that the Make targets depend on.
 $(eval $(call check_for_files,$(SRCS_H)))

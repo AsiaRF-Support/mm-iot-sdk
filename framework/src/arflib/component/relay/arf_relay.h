@@ -16,11 +16,18 @@ typedef enum {
 	BISTABLE_RELAY,
 } relay_type_t;
 
+typedef enum {
+	GPIO_ACTIVE_NONE = 0,
+    GPIO_ACTIVE_HIGH,
+    GPIO_ACTIVE_LOW,
+} gpio_active_level_t;
+
 typedef struct {
 	pwm_config_t pwm_pin;
 	GPIO_TypeDef *port;
 	uint16_t pin;
 	relay_type_t rtype;
+	gpio_active_level_t active_level;
 } relay_config_t;
 
 typedef struct
@@ -30,7 +37,7 @@ typedef struct
     xTimerHandle xTimer_off_callback;
 } relay_ctrl_t;
 
-relay_config_t relay_config(TIM_HandleTypeDef *htim, uint32_t channel, GPIO_TypeDef *port, uint16_t pin, relay_type_t rtype);
+relay_config_t relay_config(TIM_HandleTypeDef *htim, uint32_t channel, GPIO_TypeDef *port, uint16_t pin, relay_type_t rtype, gpio_active_level_t active_level);
 void relay_on(const relay_config_t *relay);
 void relay_off(const relay_config_t *relay);
 //uint8_t relay_get_state(const relay_config_t *relay);
