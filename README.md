@@ -8,7 +8,7 @@ AsiaRF for Wi-Fi HaLow IoT SDK, based on [Morse Micro IoT Software Development K
 
 ## Device Support
 
-- **AWH575-MF1-V2**
+- **AWH575-MF1**
 > [Wi-Fi HaLow IoT Powerful Industrial Remote Control Kit with RS232 RS485 I2C SPI interfaces AWH575-MF1](https://asiarf.com/product/wifi-halow-industrial-remote-contral-awh575-mf1/)
 - **AWH575-001**
 > [Wi-Fi HaLow Industrial IoT Smart Control Kit – Long-Range, Multi-Interface Low Power Solution AWH575-001](https://asiarf.com/product/wi-fi-halow-iot-smart-control-kit-awh575-001/)
@@ -28,7 +28,7 @@ AsiaRF for Wi-Fi HaLow IoT SDK, based on [Morse Micro IoT Software Development K
 
 ## Usage
 
-Quickly execute the example on the AsiaRF platform according to the [build_guide.txt](https://github.com/AsiaRF-Support/mm-iot-sdk/blob/asiarf-patched-2.8.2/build_guide.txt) file.
+Quickly execute the example on the AsiaRF platform according to the [build_guide.md](https://github.com/AsiaRF-Support/mm-iot-sdk/blob/asiarf-patched-2.8.2/BUILD_GUIDE.md) file.
 
 More details at [Morse.Micro.IoT.SDK.2.8.2.API.Reference.Manual.pdf](https://github.com/MorseMicro/mm-iot-sdk/releases/download/2.8.2/Morse.Micro.IoT.SDK.2.8.2.API.Reference.Manual.pdf) for the full MM-IoT-SDK user guide.
 
